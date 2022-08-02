@@ -2,31 +2,16 @@
   background-color: #fff5f6;
   margin: 0 auto;
   width: 100%;
-  @media screen and (max-width: 767px) {
-    background-image: url(../images/about/about-milk-background-mobile-min.png);
-    background-size: 100%;
-    background-position: 0px 560px;
-    background-repeat: no-repeat;
 
-    @include retina {
-      background-image: url(../images/about/about-milk-background-mobile@2x-min.png);
-      background-size: 100%;
-      background-position: 0px 560px;
-      background-repeat: no-repeat;
-    }
-  }
+  background-position: center;
+  background-repeat: no-repeat;
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 768px) {
     background-image: url(../images/about/about-milk-background-desktop-min.png);
-    background-size: 1200px;
-    background-position: 50% 100%;
-    background-repeat: no-repeat;
+    background-size: 100%;
 
     @include retina {
-      border-image: url(../images/about/about-milk-background-desktop@2x-min.png);
-      background-size: 1200px;
-      background-position: 50% 100%;
-      background-repeat: no-repeat;
+      background-image: url(../images/about/about-milk-background-desktop@2x-min.png);
     }
   }
 }
@@ -37,6 +22,19 @@
     gap: 32px;
     align-items: center;
     justify-content: space-between;
+  }
+}
+
+.about-text {
+  @media screen and (max-width: 767px) {
+    background-image: url(../images/about/about-milk-background-mobile-min.png);
+    background-size: 280px;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @include retina {
+      background-image: url(../images/about/about-milk-background-mobile@2x-min.png);
+    }
   }
 }
 
