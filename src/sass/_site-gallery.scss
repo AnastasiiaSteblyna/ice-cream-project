@@ -1,0 +1,112 @@
+.site-gallery__section {
+  padding-top: 0;
+  background-image: linear-gradient(
+    to bottom,
+    #fff5f6 23%,
+    var(--main-background-color) 23%
+  );
+
+  @media screen and (min-width: $tablet-break-point) {
+    background-image: linear-gradient(
+      to bottom,
+      #fff5f6 26%,
+      var(--main-background-color) 26%
+    );
+  }
+
+  @media screen and (min-width: $desktop-break-point) {
+    background-image: linear-gradient(
+      to bottom,
+      #fff5f6 29%,
+      var(--main-background-color) 29%
+    );
+  }
+}
+
+.gallery {
+  display: grid;
+  grid-gap: 2px;
+  grid: repeat(12, 9px) / repeat(28, 9px);
+  justify-content: center;
+
+  @media screen and (min-width: $tablet-break-point) {
+    grid-gap: 4px;
+    grid: repeat(12, 22px) / repeat(28, 22px);
+  }
+
+  @media screen and (min-width: $desktop-break-point) {
+    grid-gap: 6px;
+    grid: repeat(12, 36px) / repeat(28, 36px);
+  }
+}
+
+.gallery__item:hover,
+.gallery__item:focus {
+  z-index: 3;
+}
+
+.gallery__item:nth-child(1) {
+  grid-area: 5/1 / span 4 / span 4;
+}
+
+.gallery__item:nth-child(2) {
+  grid-area: 4/5 / span 4 / span 4;
+}
+
+.gallery__item:nth-child(3) {
+  grid-area: 8/5 / span 4 / span 4;
+}
+
+.gallery__item:nth-child(4) {
+  grid-area: 1/9 / span 8 / span 8;
+}
+
+.gallery__item:nth-child(5) {
+  grid-area: 9/9 / span 4 / span 4;
+}
+
+.gallery__item:nth-child(6) {
+  grid-area: 4/17 / span 4 / span 4;
+}
+
+.gallery__item:nth-child(7) {
+  grid-area: 8/17 / span 4 / span 4;
+}
+
+.gallery__item:nth-child(8) {
+  grid-area: 3/21 / span 4 / span 4;
+}
+
+.gallery__item:nth-child(9) {
+  grid-area: 7/21 / span 4 / span 4;
+}
+
+.gallery__item:nth-child(10) {
+  grid-area: 5/25 / span 4 / span 4;
+}
+
+.gallery__img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  
+  @media screen and (min-width: $tablet-break-point) {
+    border-radius: 20px;
+  }
+
+  .gallery__item & {
+    transform: scale(1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .gallery__item:hover &,
+  .gallery__item:focus & {
+    transform: scale(1.2);
+  }
+
+  .gallery__item--big:hover &,
+  .gallery__item--big:focus & {
+    transform: scale(1.1);
+  }
+}
